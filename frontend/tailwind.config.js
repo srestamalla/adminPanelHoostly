@@ -6,6 +6,7 @@ export default {
       poppins: ["Poppins", "sans-serif"],
     },
     colors: {
+      primaryBg: "#F5F6F8",
       primaryYellow: "#FFB946",
       white: "#FFFFFF",
       offWhite: "#F9F9F9",
