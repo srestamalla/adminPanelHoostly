@@ -106,7 +106,7 @@ export const menuItemsData = [
     ),
   },
   {
-    to: "/banner-management",
+    to: "/banner-lists",
     text: "Banner Management",
     icon: (
       <svg

@@ -1,22 +1,68 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import menuItemsData from "../../data/menuItemsData";
 import SidebarMenuItemComponent from "../../components/SidebarMenuItemComponent";
+import useCheckMobileScreen from "../../assets/hooks/useCheckMobileScreen";
 
 const Sidebar = () => {
+  const [open, setOpen] = useState(true);
+
+  const [width, setWidth] = useState(window.innerWidth);
+
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+  const isMobile = width <= 768;
+  useEffect(() => {
+    if (isMobile) {
+      setOpen(false);
+    }
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
   return (
     <>
-      <aside className="bg-white shadow-lg flex flex-col h-full">
-        <div className="px-4 py-5">
-          <h1 className="text-[13px] px-4 font-medium">Marketcayman Logo</h1>
+      <aside
+        className={`bg-white shadow-lg flex flex-col min-h-full relative ${
+          open ? "w-72" : "w-14"
+        }`}
+      >
+        <div className={`${open ? "px-4" : "px-2"} py-5`}>
+          <h1 className="text-[13px]  font-medium">
+            {open ? "Marketcayman Logo" : "Logo"}
+          </h1>
           {/* <img src="/path-to-your-logo.png" alt="Logo" className="w-12 h-12" /> */}
         </div>
         <hr className="border-t-1 border-lightGray" />
+        {isMobile ? (
+          <div
+            onClick={() => setOpen(!open)}
+            className="absolute top-16 right-0"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className={`w-4 h-4 text-gray ${!open && "rotate-180"} `}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5"
+              />
+            </svg>
+          </div>
+        ) : null}
 
         <nav className="p-4 flex-grow">
           <ul>
             {menuItemsData.map((item, index) => (
-              <SidebarMenuItemComponent key={index} {...item} />
+              <SidebarMenuItemComponent key={index} {...item} open={open} />
             ))}
           </ul>
         </nav>
@@ -51,7 +97,7 @@ const Sidebar = () => {
                     </defs>
                   </svg>
                 </div>
-                <div>Log Out</div>
+                <div className={`${!open && "scale-0"}`}>Log Out</div>
               </Link>
             </li>
           </ul>

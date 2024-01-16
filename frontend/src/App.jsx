@@ -12,6 +12,8 @@ import AboutUs from "./pages/Pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
 import TermsAndConditions from "./pages/Pages/TermsAndConditions";
 import PrivacyPolicy from "./pages/Pages/PrivacyPolicy";
+import BannerList from "./pages/BannerList";
+import AddCategory from "./pages/AddCategory";
 
 const App = () => {
   return (
@@ -21,8 +23,9 @@ const App = () => {
           <Route path="/" element={<Dashboard />} />
           <Route path="/user-management" element={<UserManagement />} />
           <Route path="/category-management" element={<CategoryManagement />} />
+          <Route path="/add-category" element={<AddCategory />} />
           <Route path="/ads-management" element={<AdsManagement />} />
-          <Route path="/banner-management" element={<BannerManagement />} />
+          <Route path="/banner-lists" element={<BannerList />} />
           <Route path="/featured-ads" element={<FeaturedAds />} />
           <Route path="/transaction" element={<Transaction />} />
           <Route path="/notification" element={<Notification />} />

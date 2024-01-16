@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-const SidebarMenuItemComponent = ({ to, text, icon }) => {
+const SidebarMenuItemComponent = ({ to, text, icon, open }) => {
   const location = useLocation();
   const isActive = location.pathname === to;
   const urlParams = new URLSearchParams(window.location.search);
@@ -32,7 +32,7 @@ const SidebarMenuItemComponent = ({ to, text, icon }) => {
           <div className="pr-5 text-gray group-hover:text-primaryYellow">
             {icon}
           </div>
-          {text}
+          <div className={`${!open && "scale-0"}`}>{text}</div>
         </li>
         {pageActive ? (
           <div className="px-2 py-1 text-[12px] ml-10">
@@ -99,7 +99,9 @@ const SidebarMenuItemComponent = ({ to, text, icon }) => {
         >
           {icon}
         </div>
-        <div className={`group-hover:text-primaryYellow`}>{text}</div>
+        <div className={`group-hover:text-primaryYellow ${!open && "scale-0"}`}>
+          {text}
+        </div>
       </Link>
     </li>
   );

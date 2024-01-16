@@ -1,30 +1,46 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import Layout from "../../containers/layouts";
 import CustomButton from "../../shared/CustomButton";
 import categoryTableRowData from "../../data/categoryTableRowData";
 
-const CategoryManagement = () => {
-  const navigate = useNavigate();
-
-  const handleCreateCategoryClick = () => {
-    navigate("/add-category");
-  };
-
+const AddCategory = () => {
   return (
     <>
-      <Layout pageTitle="Category Management">
+      <Layout pageTitle="Add Category">
         <div className="px-4">
-          <div className="px-4 py-8 flex justify-end text-[13px] ">
+          <div className="px-4 pt-8 pb-4 flex justify-end space-x-4 text-[13px] ">
             <CustomButton
               bgColor="primaryYellow"
               textColor="black"
+              label="Cancel"
+              onClick={() => {
+                // Handle Approve button click
+              }}
+            />
+            <CustomButton
+              bgColor="black"
+              textColor="white"
               label="Create Category"
-              onClick={handleCreateCategoryClick}
+              onClick={() => {
+                // Handle Approve button click
+              }}
+            />
+          </div>
+          <div className="px-4 py-4 flex justify-end text-[13px] ">
+            <CustomButton
+              bgColor="black"
+              textColor="white"
+              label="Back To List"
+              onClick={() => {
+                // Handle Approve button click
+              }}
             />
           </div>
           <div className="px-4">
-            <p className="text-xl font-normal">List of Categories</p>
+            <p className="text-xl font-normal">Categories</p>
+          </div>
+          <div className="px-4 pt-4">
+            <p className="text-sm font-normal">Add New Category</p>
           </div>
           <div className="p-4">
             <table className="w-full border-collapse p-2">
@@ -75,4 +91,4 @@ const CategoryManagement = () => {
   );
 };
 
-export default CategoryManagement;
+export default AddCategory;

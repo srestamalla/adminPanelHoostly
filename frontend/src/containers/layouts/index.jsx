@@ -4,7 +4,7 @@ import Header from "../../shared/header";
 
 const Layout = ({ children, pageTitle }) => {
   return (
-    <div className="flex h-screen">
+    <div className="flex min-h-full">
       <Sidebar />
       <div className="flex-1 flex flex-col overflow-hidden">
         <Header pageTitle={pageTitle} />

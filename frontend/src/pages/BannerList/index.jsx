@@ -5,10 +5,10 @@ import deleteIcon from "../../assets/icons/deleteIcon.svg";
 import editIcon from "../../assets/icons/editIcon.svg";
 import CustomButton from "../../shared/CustomButton";
 
-const BannerManagement = () => {
+const BannerList = () => {
   return (
     <>
-      <Layout pageTitle="Banner Management">
+      <Layout pageTitle="Banner Lists">
         <div className="px-4">
           <div className="px-4 py-8 flex justify-end text-[13px] ">
             <CustomButton
@@ -79,4 +79,4 @@ const BannerManagement = () => {
   );
 };
 
-export default BannerManagement;
+export default BannerList;
