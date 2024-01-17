@@ -8,7 +8,7 @@ const Layout = ({ children, pageTitle }) => {
       <Sidebar />
       <div className="flex-1 flex flex-col overflow-hidden">
         <Header pageTitle={pageTitle} />
-        <main className="flex-1 overflow-x-hidden overflow-y-auto bg-gray-100 p-4">
+        <main className="flex-1 overflow-x-hidden overflow-y-auto bg-gray-100 p-0 md:p-4">
           {children}
         </main>
       </div>
