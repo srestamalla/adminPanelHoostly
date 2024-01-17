@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Layout from "../../containers/layouts";
 import CustomButton from "../../shared/CustomButton";
 import categoryTableRowData from "../../data/categoryTableRowData";
+import fileIcon from "../../assets/icons/fileIcon.svg";
 
 const CategoryManagement = () => {
   const navigate = useNavigate();
@@ -54,16 +55,32 @@ const CategoryManagement = () => {
                     <td className=" py-4 text-center font-normal   text-tableGray border-b border-lightGray">
                       {item.subCategory}
                     </td>
-                    <td className=" py-4 font-medium border-b border-lightGray">
+                    <td className=" py-4 text-center border-b border-lightGray">
                       <img
                         className="inline-block h-6 w-6 rounded-full ring-white"
                         src={item.image}
                         alt="User Profile thumbnail"
                       ></img>
                     </td>
-                    <td className=" py-4 text-center font-normal  text-tableGray border-b border-lightGray">
-                      <button></button>
-                      Disable /Enable
+                    <td className=" py-4 px-1 text-center font-normal text-tableGray border-b border-lightGray">
+                      <div className="space-y-1 md:flex md:space-x-2 md:justify-center md:items-center">
+                        <button className="bg-primaryYellow text-white w-12 rounded-[3px] py-1 px-1 flex justify-center items-center md:w-20">
+                          <img
+                            src={fileIcon}
+                            alt="File Icon"
+                            className="w-4/12"
+                          ></img>
+                          Edit
+                        </button>
+                        <button className="bg-black text-white w-12 rounded-[3px] py-1 px-1 flex justify-center items-center md:w-20">
+                          <img
+                            src={fileIcon}
+                            alt="File Icon"
+                            className="w-4/12"
+                          ></img>
+                          Delete
+                        </button>
+                      </div>
                     </td>
                   </tr>
                 ))}
