@@ -37,7 +37,7 @@ const UserManagement = () => {
                 </svg>
               </button>
             </div>
-            <div className="text-[10px] md:text-base">
+            <div className="text-[10px] md:text-[13px]">
               <CustomButton
                 bgColor="primaryYellow"
                 textColor="black"
@@ -45,6 +45,8 @@ const UserManagement = () => {
                 onClick={() => {
                   // Handle Approve button click
                 }}
+                smallDeviceWith="20"
+                width="auto"
               />
             </div>
           </div>

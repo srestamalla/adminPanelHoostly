@@ -21,14 +21,15 @@ const CategoryManagement = () => {
               textColor="black"
               label="Create Category"
               onClick={handleCreateCategoryClick}
+              smallDeviceWith="40"
             />
           </div>
           <div className="px-4">
-            <p className="text-xl font-normal">List of Categories</p>
+            <p className="text-sm md:text-xl font-normal">List of Categories</p>
           </div>
           <div className="p-4">
             <table className="w-full border-collapse p-2">
-              <thead className="bg-white text-darkBlue text-[13px]">
+              <thead className="bg-white text-darkBlue text-[9px] md:text-[13px]">
                 <tr>
                   <th className="font-medium py-2 border-b border-lightGray">
                     Category Name
@@ -44,13 +45,13 @@ const CategoryManagement = () => {
                   </th>
                 </tr>
               </thead>
-              <tbody className="text-[15px]">
+              <tbody className="text-[9px] md:text-[15px]">
                 {categoryTableRowData.map((item, index) => (
                   <tr key={index} className="bg-white">
-                    <td className=" py-4 text-center font-normal text-sm text-tableGray border-b border-lightGray">
+                    <td className=" py-4 text-center font-normal  text-tableGray border-b border-lightGray">
                       <p>{item.categoryName}</p>
                     </td>
-                    <td className=" py-4 text-center font-normal text-sm  text-tableGray border-b border-lightGray">
+                    <td className=" py-4 text-center font-normal   text-tableGray border-b border-lightGray">
                       {item.subCategory}
                     </td>
                     <td className=" py-4 font-medium border-b border-lightGray">
@@ -60,7 +61,7 @@ const CategoryManagement = () => {
                         alt="User Profile thumbnail"
                       ></img>
                     </td>
-                    <td className=" py-4 text-center font-normal text-sm text-tableGray border-b border-lightGray">
+                    <td className=" py-4 text-center font-normal  text-tableGray border-b border-lightGray">
                       <button></button>
                       Disable /Enable
                     </td>

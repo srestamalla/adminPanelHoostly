@@ -5,10 +5,12 @@ const CustomButton = ({
   textColor = "white",
   label,
   onClick,
+  smallDeviceWith = "20",
+  width = "44",
 }) => {
   return (
     <button
-      className={`bg-${bgColor} text-${textColor} p-1 px-3 md:px-12 md:py-2 rounded-full font-normal w-20 md:w-44 whitespace-pre`}
+      className={`bg-${bgColor} text-${textColor} p-1 px-3  md:py-2 rounded-full font-normal w-${smallDeviceWith} md:w-${width} whitespace-pre`}
       onClick={onClick}
     >
       {label}
