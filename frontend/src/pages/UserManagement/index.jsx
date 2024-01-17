@@ -84,7 +84,7 @@ const UserManagement = () => {
                     key={index}
                     className="bg-white text-[8px] md:text-[13px]"
                   >
-                    <td className="px-2 py-4  text-center border-b border-lightGray">
+                    <td className="px-2 py-4 text-center border-b border-lightGray">
                       <div>
                         <input
                           id={`checkbox${item.id}`}
@@ -104,16 +104,16 @@ const UserManagement = () => {
                         {item.name}
                       </div>
                     </td>
-                    <td className=" py-4 text-center   text-tableGray border-b border-lightGray">
+                    <td className=" py-4 text-center text-tableGray border-b border-lightGray">
                       {item.email}
                     </td>
-                    <td className=" py-4 text-center    text-tableGray border-b border-lightGray">
+                    <td className=" py-4 text-center text-tableGray border-b border-lightGray">
                       {item.phoneNo}
                     </td>
-                    <td className=" py-4 text-center   text-tableGray border-b border-lightGray hidden md:table-cell">
+                    <td className=" py-4 text-center text-tableGray border-b border-lightGray hidden md:table-cell">
                       View
                     </td>
-                    <td className=" py-4 text-center   text-tableGray border-b border-lightGray hidden md:table-cell">
+                    <td className=" py-4 text-center text-tableGray border-b border-lightGray hidden md:table-cell">
                       Disable /Enable
                     </td>
                     <td className=" py-4 text-center border-b border-lightGray">
