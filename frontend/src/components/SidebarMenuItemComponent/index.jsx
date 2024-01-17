@@ -35,35 +35,37 @@ const SidebarMenuItemComponent = ({ to, text, icon, open }) => {
           <div className={`${!open && "scale-0"}`}>{text}</div>
         </li>
         {pageActive ? (
-          <div className="px-2 py-1 text-[12px] ml-10">
-            <div>
+          <div className=" py-2 pl-14 text-[12px]  bg-white w-32 md:w-auto ">
+            <div className="py-1">
               <Link
                 to="/about-us?pagesActive=true"
-                className={`py-2 flex items-center ${
-                  isAboutUsActive
-                    ? "text-primaryYellow"
-                    : "hover:text-primaryYellow"
-                }`}
+                className={`{
+                  ${
+                    isAboutUsActive
+                      ? "text-primaryYellow"
+                      : "hover:text-primaryYellow"
+                  }`}
               >
                 About Us
               </Link>
             </div>
-            <div>
+            <div className="py-1">
               <Link
                 to="/terms-and-conditions?pagesActive=true"
-                className={`py-2 flex items-center ${
-                  isTermsAndConditionActive
-                    ? "text-primaryYellow"
-                    : "hover:text-primaryYellow"
-                }`}
+                className={`{
+                  ${
+                    isTermsAndConditionActive
+                      ? "text-primaryYellow"
+                      : "hover:text-primaryYellow"
+                  }`}
               >
                 Terms and Conditions
               </Link>
             </div>
-            <div>
+            <div className="py-1">
               <Link
                 to="/privacy-policy?pagesActive=true"
-                className={`py-2 flex items-center ${
+                className={`${
                   isPrivacyPolicyActive
                     ? "text-primaryYellow"
                     : "hover:text-primaryYellow"

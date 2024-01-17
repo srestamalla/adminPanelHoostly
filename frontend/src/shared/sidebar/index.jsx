@@ -21,12 +21,12 @@ const Sidebar = () => {
     return () => {
       window.removeEventListener("resize", handleWindowSizeChange);
     };
-  }, []);
+  }, [window.innerWidth]);
 
   return (
     <>
       <aside
-        className={`bg-white shadow-lg flex flex-col min-h-full relative ${
+        className={`bg-white shadow-lg flex flex-col min-h-full fixed z-10 ${
           open ? "w-72" : "w-14"
         }`}
       >
@@ -40,7 +40,7 @@ const Sidebar = () => {
         {isMobile ? (
           <div
             onClick={() => setOpen(!open)}
-            className="absolute top-16 right-0"
+            className="absolute top-16 right-0 -mr-3 bg-white border-gray border-[1px] rounded-full p-1"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +48,7 @@ const Sidebar = () => {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className={`w-4 h-4 text-gray ${open && "rotate-180"} `}
+              className={`w-3 h-3 text-gray ${open && "rotate-180"} `}
             >
               <path
                 strokeLinecap="round"
@@ -67,7 +67,7 @@ const Sidebar = () => {
           </ul>
         </nav>
 
-        <div className="p-4">
+        <div className="p-4 ">
           <ul>
             <li className="p-2 mt-auto text-[13px] font-medium">
               <Link

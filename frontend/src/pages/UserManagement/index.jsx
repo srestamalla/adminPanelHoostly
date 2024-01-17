@@ -78,7 +78,7 @@ const UserManagement = () => {
                   </th>
                 </tr>
               </thead>
-              <tbody className="text-[15px]">
+              <tbody>
                 {userTableRowData.map((item, index) => (
                   <tr
                     key={index}

@@ -62,23 +62,23 @@ const CategoryManagement = () => {
                         alt="User Profile thumbnail"
                       ></img>
                     </td>
-                    <td className=" py-4 px-1 text-center font-normal text-tableGray border-b border-lightGray">
-                      <div className="space-y-1 md:flex md:space-x-2 md:justify-center md:items-center">
-                        <button className="bg-primaryYellow text-white w-12 rounded-[3px] py-1 px-1 flex justify-center items-center md:w-20">
+                    <td className=" py-4 px-1 text-center font-normal text-tableGray border-b border-lightGray ">
+                      <div className=" md:flex md:space-x-2 md:justify-center md:items-center space-y-1 md:space-y-0">
+                        <button className="bg-primaryYellow text-white w-14 rounded-[3px] py-1 px-1 flex items-center gap-1 md:justify-center md:w-20">
                           <img
                             src={fileIcon}
                             alt="File Icon"
-                            className="w-4/12"
+                            className="w-3 md:w-4"
                           ></img>
-                          Edit
+                          <div>Edit</div>
                         </button>
-                        <button className="bg-black text-white w-12 rounded-[3px] py-1 px-1 flex justify-center items-center md:w-20">
+                        <button className="bg-black text-white w-14 rounded-[3px] py-1 px-1 flex items-center gap-1 md:w-20">
                           <img
                             src={fileIcon}
                             alt="File Icon"
-                            className="w-4/12"
+                            className="w-3 md:w-4"
                           ></img>
-                          Delete
+                          <div>Delete</div>
                         </button>
                       </div>
                     </td>

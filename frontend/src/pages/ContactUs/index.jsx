@@ -7,13 +7,15 @@ const ContactUs = () => {
   return (
     <>
       <Layout pageTitle="Contact Us">
-        <div className="px-4">
+        <div className="md:px-4">
           <div className="px-4 pt-8">
-            <p className="text-xl font-normal">Data from Contact Form</p>
+            <p className="text-sm md:text-xl font-normal">
+              Data from Contact Form
+            </p>
           </div>
           <div className="p-4">
             <table className="w-full border-collapse p-2">
-              <thead className="bg-white text-darkBlue text-[13px]">
+              <thead className="bg-white text-darkBlue text-[8px] md:text-[13px]">
                 <tr>
                   <th className="px-2 py-2 border-b border-lightGray"></th>
                   <th className="font-medium py-2 border-b border-lightGray">
@@ -36,9 +38,12 @@ const ContactUs = () => {
                   </th>
                 </tr>
               </thead>
-              <tbody className="text-[15px]">
+              <tbody>
                 {contactTableRowData.map((item, index) => (
-                  <tr key={index} className="bg-white">
+                  <tr
+                    key={index}
+                    className="bg-white text-[8px] md:text-[13px]"
+                  >
                     <td className="px-2 py-4  text-center border-b border-lightGray">
                       <div>
                         <input
@@ -50,25 +55,25 @@ const ContactUs = () => {
                       </div>
                     </td>
                     <td className=" py-4 font-medium border-b border-lightGray">
-                      <div className="flex justify-center items-center space-x-3">
+                      <div className="flex justify-left items-center gap-1 md:gap-3 md:space-x-3">
                         <img
-                          className="inline-block h-6 w-6 rounded-full ring-white"
+                          className="inline-block h-3 w-3 md:h-6 md:w-6 rounded-full ring-white"
                           src={item.image}
                           alt="User Profile thumbnail"
                         ></img>
-                        <p>{item.name}</p>
+                        {item.name}
                       </div>
                     </td>
-                    <td className=" py-4 text-center font-normal text-sm text-tableGray border-b border-lightGray">
-                      <p>{item.email}</p>
+                    <td className=" py-4 text-center text-tableGray border-b border-lightGray">
+                      {item.email}
                     </td>
-                    <td className=" py-4 text-center font-normal text-sm  text-tableGray border-b border-lightGray">
+                    <td className=" py-4 text-center  text-tableGray border-b border-lightGray">
                       {item.phoneNo}
                     </td>
-                    <td className=" py-4 text-center font-normal text-sm text-tableGray border-b border-lightGray">
+                    <td className=" py-4 text-center text-tableGray border-b border-lightGray">
                       {item.message}
                     </td>
-                    <td className=" py-4 text-center font-normal text-sm text-tableGray border-b border-lightGray">
+                    <td className=" py-4 text-center text-tableGray border-b border-lightGray">
                       <img src={fileIcon} alt="File icon" />
                     </td>
                     <td className=" py-4 text-center border-b border-lightGray">
