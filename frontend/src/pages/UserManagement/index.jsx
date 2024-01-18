@@ -95,7 +95,7 @@ const UserManagement = () => {
                           className="inline-block h-3 w-3 md:h-6 md:w-6 rounded-full ring-white"
                           src={item.image}
                           alt="User Profile thumbnail"
-                        ></img>
+                        />
                         {item.name}
                       </div>
                     </td>
