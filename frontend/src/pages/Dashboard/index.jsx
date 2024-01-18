@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Layout from "../../containers/layouts";
 import usericon from "../../assets/icons/usericon.png";
 import DashboardCardComponent from "../../components/DashboardCardComponent";
@@ -6,7 +6,6 @@ import CustomButton from "../../shared/CustomButton";
 import dashboardTableRowData from "../../data/dashboardTableRowData";
 
 const Dashboard = () => {
-  const [open, setOpen] = useState(false);
   const dashboardCards = [
     { img: usericon, count: "568", desc: "Total User" },
     { img: usericon, count: "100", desc: "Total Ads" },
@@ -32,7 +31,7 @@ const Dashboard = () => {
           {["Days", "Weeks", "Months"].map((period, index) => (
             <div
               key={index}
-              className="px-2 py-1 md:py-0 md:px-4 bg-primaryYellow text-white text-sm md:text-[20px] font-medium flex items-center drop-shadow-lg"
+              className="px-2 py-1 md:py-2 md:px-4 bg-primaryYellow text-white text-sm md:text-[20px] font-medium flex items-center drop-shadow-lg"
             >
               {period}
             </div>
@@ -86,6 +85,7 @@ const Dashboard = () => {
                           onClick={() => {
                             // Handle Approve button click
                           }}
+                          width="auto"
                         />
                         <CustomButton
                           bgColor="black"
@@ -94,6 +94,7 @@ const Dashboard = () => {
                           onClick={() => {
                             // Handle Reject button click
                           }}
+                          width="auto"
                         />
                       </div>
                     </td>

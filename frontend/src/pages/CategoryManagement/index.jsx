@@ -15,14 +15,14 @@ const CategoryManagement = () => {
   return (
     <>
       <Layout pageTitle="Category Management">
-        <div className="px-4 md:px-4">
+        <div className="px-4">
           <div className="md:px-4 py-8 flex items-center text-[13px] justify-end ">
             <CustomButton
               bgColor="primaryYellow"
               textColor="black"
               label="Create Category"
               onClick={handleCreateCategoryClick}
-              smallDeviceWith="40"
+              smallDeviceWidth="40"
             />
           </div>
           <div className="md:px-4">

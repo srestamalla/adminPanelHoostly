@@ -18,7 +18,7 @@ const AdsManagement = () => {
               onClick={() => {
                 // Handle Approve button click
               }}
-              smallDeviceWith="22"
+              smallDeviceWidth="22"
             />
           </div>
           <div className="px-1 md:px-4">
@@ -53,8 +53,12 @@ const AdsManagement = () => {
                         {item.category}
                       </td>
                       <td className="px-1 md:px-4 py-3 font-semibold">
-                        <button className="bg-green text-white px-2 md:px-4 py-2 rounded-md">
-                          Active
+                        <button
+                          className={`${
+                            item.status === "Active" ? "bg-green" : "bg-red"
+                          } text-white px-1 md:px-4 py-2 rounded-md`}
+                        >
+                          {item.status}
                         </button>
                       </td>
                       <td className="px-1 md:px-4 py-3 font-normal">

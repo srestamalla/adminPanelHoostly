@@ -45,7 +45,7 @@ const UserManagement = () => {
                 onClick={() => {
                   // Handle Approve button click
                 }}
-                smallDeviceWith="20"
+                smallDeviceWidth="20"
                 width="auto"
               />
             </div>
@@ -66,12 +66,6 @@ const UserManagement = () => {
                   </th>
                   <th className="font-medium py-2 border-b border-lightGray">
                     Phone No
-                  </th>
-                  <th className="font-medium py-2 border-b border-lightGray hidden md:table-cell">
-                    Action
-                  </th>
-                  <th className="font-medium py-2 border-b border-lightGray hidden md:table-cell">
-                    Action
                   </th>
                   <th className="font-medium pr-2 py-2 border-b border-lightGray">
                     Action
@@ -110,20 +104,21 @@ const UserManagement = () => {
                     <td className=" py-4 text-center text-tableGray border-b border-lightGray">
                       {item.phoneNo}
                     </td>
-                    <td className=" py-4 text-center text-tableGray border-b border-lightGray hidden md:table-cell">
-                      View
-                    </td>
-                    <td className=" py-4 text-center text-tableGray border-b border-lightGray hidden md:table-cell">
-                      Disable /Enable
-                    </td>
-                    <td className=" py-4 text-center border-b border-lightGray">
-                      <button>
-                        <img
-                          src={deleteIcon}
-                          alt="Trash bin icon"
-                          className="w-2 md:w-4"
-                        />
-                      </button>
+
+                    <td className=" py-4 px-2 text-center text-tableGray border-b border-lightGray">
+                      <div className="flex justify-center items-center space-x-1 md:space-x-5">
+                        <div>View</div>
+                        <div>Disable /Enable</div>
+                        <div>
+                          <button>
+                            <img
+                              src={deleteIcon}
+                              alt="Trash bin icon"
+                              className="w-2 md:w-4"
+                            />
+                          </button>
+                        </div>
+                      </div>
                     </td>
                   </tr>
                 ))}

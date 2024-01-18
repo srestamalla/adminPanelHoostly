@@ -4,8 +4,14 @@ import bannerTableRowData from "../../data/bannerTableRowData";
 import deleteIcon from "../../assets/icons/deleteIcon.svg";
 import editIcon from "../../assets/icons/editIcon.svg";
 import CustomButton from "../../shared/CustomButton";
+import { useNavigate } from "react-router-dom";
 
 const BannerList = () => {
+  const navigate = useNavigate();
+
+  const handleAddBannerClick = () => {
+    navigate("/banner-management");
+  };
   return (
     <>
       <Layout pageTitle="Banner Lists">
@@ -15,10 +21,8 @@ const BannerList = () => {
               bgColor="black"
               textColor="white"
               label="Add a banner"
-              onClick={() => {
-                // Handle Add a banner button
-              }}
-              smallDeviceWith="40"
+              onClick={handleAddBannerClick}
+              smallDeviceWidth="40"
             />
           </div>
           <div className="md:px-4">
@@ -48,7 +52,7 @@ const BannerList = () => {
                     key={index}
                     className=" bg-white text-[8px] md:text-[13px]"
                   >
-                    <td className=" py-4 font-medium border-b border-lightGray">
+                    <td className=" pl-2 py-4 font-medium border-b border-lightGray">
                       <div className="flex justify-left items-center gap-1 md:gap-3 md:space-x-3">
                         <img
                           className="inline-block h-3 w-3 md:h-6 md:w-6 rounded-full ring-white"

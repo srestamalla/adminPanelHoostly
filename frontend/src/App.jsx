@@ -26,6 +26,7 @@ const App = () => {
           <Route path="/add-category" element={<AddCategory />} />
           <Route path="/ads-management" element={<AdsManagement />} />
           <Route path="/banner-lists" element={<BannerList />} />
+          <Route path="/banner-management" element={<BannerManagement />} />
           <Route path="/featured-ads" element={<FeaturedAds />} />
           <Route path="/transaction" element={<Transaction />} />
           <Route path="/notification" element={<Notification />} />

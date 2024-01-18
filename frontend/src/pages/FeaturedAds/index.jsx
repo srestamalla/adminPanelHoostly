@@ -19,7 +19,7 @@ const FeaturedAds = () => {
                 key={index}
                 className="py-2 rounded bg-offWhite shadow-md text-[9px] md:text-[14px] flex justify-center items-center mt-4 w-screen md:w-auto"
               >
-                <div className="pl-1 md:px-4 py-3 w-60 md:w-auto whitespace-pre">
+                <div className="pl-2 md:px-4 py-3 w-60 md:w-auto whitespace-pre">
                   <div>
                     From: <span className="font-semibold ">{item.from}</span>
                   </div>
@@ -42,7 +42,11 @@ const FeaturedAds = () => {
                 </div>
                 <div className="px-1 md:px-4 py-3 font-normal">{item.name}</div>
                 <div className="px-1 md:px-4 py-3 font-semibold">
-                  <button className="bg-green text-white px-1 md:px-4 py-2 rounded-md">
+                  <button
+                    className={`${
+                      item.status === "Active" ? "bg-green" : "bg-red"
+                    } text-white px-1 md:px-4 py-2 rounded-md`}
+                  >
                     {item.status}
                   </button>
                 </div>
@@ -51,7 +55,7 @@ const FeaturedAds = () => {
                     Promote
                   </button>
                 </div>
-                <div className="px-1 md:px-4 py-3">
+                <div className="px-1 md:px-4 py-3 w-20 md:w-auto">
                   <button>
                     <img src={deleteIcon} alt="Bin icon" />
                   </button>

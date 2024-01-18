@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import menuItemsData from "../../data/menuItemsData";
 import SidebarMenuItemComponent from "../../components/SidebarMenuItemComponent";
-import useCheckMobileScreen from "../../assets/hooks/useCheckMobileScreen";
 
 const Sidebar = () => {
   const [open, setOpen] = useState(true);

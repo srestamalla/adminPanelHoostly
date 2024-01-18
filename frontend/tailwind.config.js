@@ -17,6 +17,7 @@ export default {
       red: "FF0000",
       tableGray: "#707683",
       green: "#009C2C",
+      red: "#9C0000",
     },
     extend: {},
   },
