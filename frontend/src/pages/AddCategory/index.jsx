@@ -1,55 +1,18 @@
 import React from "react";
 import Layout from "../../containers/layouts";
 import CustomButton from "../../shared/CustomButton";
-import { Formik, Form, useField } from "formik";
+import { Formik, Form } from "formik";
 import * as Yup from "yup";
-
-const TextInput = ({ label, ...props }) => {
-  const [field, meta] = useField(props);
-  return (
-    <>
-      <div className="pt-4">
-        <div>
-          <label htmlFor={props.id || props.name} className="">
-            {label}
-          </label>
-        </div>
-        <div className="pt-2">
-          <input className="text-input w-full h-10" {...field} {...props} />
-        </div>
-      </div>
-      <div>
-        {meta.touched && meta.error ? (
-          <div className="error text-red text-xs">{meta.error}</div>
-        ) : null}
-      </div>
-    </>
-  );
-};
-const FileUploadInput = ({ label, ...props }) => {
-  const [field, meta] = useField(props);
-  return (
-    <>
-      <div className="flex-col pt-4">
-        <div>
-          <label htmlFor={props.id || props.name} className="">
-            {label}
-          </label>
-        </div>
-        <div className="pt-2">
-          <input className="text-input w-full h-10" {...field} {...props} />
-        </div>
-      </div>
-      <div>
-        {meta.touched && meta.error ? (
-          <div className="error text-red text-xs">{meta.error}</div>
-        ) : null}
-      </div>
-    </>
-  );
-};
+import { useNavigate } from "react-router-dom";
+import CustomTextInputField from "../../components/CustomFormsFields/CustomTextInputField";
+import CustomFileUploadField from "../../components/CustomFormsFields/CustomFileUploadField";
 
 const AddCategory = () => {
+  const navigate = useNavigate();
+
+  const handleBackToListClick = () => {
+    navigate("/category-management");
+  };
   return (
     <>
       <Layout pageTitle="Add Category">
@@ -79,9 +42,7 @@ const AddCategory = () => {
               bgColor="black"
               textColor="white"
               label="Back To List"
-              onClick={() => {
-                // Handle Approve button click
-              }}
+              onClick={handleBackToListClick}
               smallDeviceWidth="32"
             />
           </div>
@@ -115,23 +76,28 @@ const AddCategory = () => {
               }}
             >
               <Form>
-                <TextInput
-                  label="Category Name"
-                  name="categoryName"
-                  type="text"
-                />
+                <div className="pt-4">
+                  <CustomTextInputField
+                    label="Category Name"
+                    name="categoryName"
+                    type="text"
+                  />
+                </div>
 
-                <TextInput
-                  label="Parent Category"
-                  name="parentCategory"
-                  type="text"
-                />
+                <div className="pt-4">
+                  <CustomTextInputField
+                    label="Parent Category"
+                    name="parentCategory"
+                    type="text"
+                  />
+                </div>
 
-                <FileUploadInput
-                  label="Category Icon"
-                  name="categoryIcon"
-                  type="file"
-                />
+                <div className="pt-4">
+                  <CustomFileUploadField
+                    label="Category Icon"
+                    name="categoryIcon"
+                  />
+                </div>
               </Form>
             </Formik>
           </div>

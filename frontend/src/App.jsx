@@ -14,6 +14,7 @@ import TermsAndConditions from "./pages/Pages/TermsAndConditions";
 import PrivacyPolicy from "./pages/Pages/PrivacyPolicy";
 import BannerList from "./pages/BannerList";
 import AddCategory from "./pages/AddCategory";
+import UserDetails from "./pages/UserDetails";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/user-management" element={<UserManagement />} />
+          <Route path="/user-details" element={<UserDetails />} />
           <Route path="/category-management" element={<CategoryManagement />} />
           <Route path="/add-category" element={<AddCategory />} />
           <Route path="/ads-management" element={<AdsManagement />} />

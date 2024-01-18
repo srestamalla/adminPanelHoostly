@@ -3,6 +3,7 @@ import Layout from "../../containers/layouts";
 import CustomButton from "../../shared/CustomButton";
 import deleteIcon from "../../assets/icons/deleteIcon.svg";
 import userTableRowData from "../../data/userTableRowData";
+import { Link } from "react-router-dom";
 
 const UserManagement = () => {
   return (
@@ -107,7 +108,14 @@ const UserManagement = () => {
 
                     <td className=" py-4 px-2 text-center text-tableGray border-b border-lightGray">
                       <div className="flex justify-center items-center space-x-1 md:space-x-5">
-                        <div>View</div>
+                        <div>
+                          <Link
+                            to="/user-details"
+                            className="py-2 flex items-center hover:text-primaryYellow"
+                          >
+                            View
+                          </Link>
+                        </div>
                         <div>Disable /Enable</div>
                         <div>
                           <button>
