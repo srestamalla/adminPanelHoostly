@@ -28,7 +28,7 @@ const BannerList = () => {
           <div className="md:px-4">
             <p className="text-sm md:text-xl font-normal">Banner List</p>
           </div>
-          <div className="md:p-4">
+          <div className="md:p-4 w-screen md:w-auto">
             <table className="w-full border-collapse p-2">
               <thead className="bg-white text-darkBlue text-[8px] md:text-[13px]">
                 <tr>

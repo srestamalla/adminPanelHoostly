@@ -18,6 +18,7 @@ export default {
       tableGray: "#707683",
       green: "#009C2C",
       red: "#9C0000",
+      skyBlue: "#F2F9FF",
     },
     extend: {},
   },

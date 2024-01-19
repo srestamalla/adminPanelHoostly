@@ -24,7 +24,7 @@ const AdsManagement = () => {
           <div className="px-1 md:px-4">
             <p className="text-sm md:text-xl font-normal">See List of Ads</p>
           </div>
-          <div className="p-1 md:p-4">
+          <div className="p-1 md:p-4 w-screen md:w-auto">
             <table className="w-full border-collapse">
               <thead className="bg-white text-darkBlue text-[9px] md:text-[13px]">
                 <tr>

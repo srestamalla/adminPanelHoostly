@@ -57,7 +57,7 @@ const CategoryManagement = () => {
                     </td>
                     <td className=" py-4 text-center border-b border-lightGray">
                       <img
-                        className="inline-block h-6 w-6 rounded-full ring-white"
+                        className="inline-block h-4 w-4 md:h-6 md:w-6 rounded-full ring-white"
                         src={item.image}
                         alt="User Profile thumbnail"
                       ></img>

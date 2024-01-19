@@ -46,7 +46,6 @@ const UserManagement = () => {
                 onClick={() => {
                   // Handle Approve button click
                 }}
-                smallDeviceWidth="20"
                 width="auto"
               />
             </div>
@@ -54,7 +53,7 @@ const UserManagement = () => {
           <div className="md:px-4">
             <p className="text-sm md:text-xl font-normal">List of Users</p>
           </div>
-          <div className="md:p-4">
+          <div className="md:p-4 w-screen md:w-auto">
             <table className="w-full border-collapse p-2">
               <thead className="bg-white text-darkBlue text-[8px] md:text-[13px]">
                 <tr>
@@ -96,7 +95,7 @@ const UserManagement = () => {
                           src={item.image}
                           alt="User Profile thumbnail"
                         />
-                        {item.name}
+                        <div className="whitespace-pre">{item.name}</div>
                       </div>
                     </td>
                     <td className=" py-4 text-center text-tableGray border-b border-lightGray">
@@ -107,7 +106,7 @@ const UserManagement = () => {
                     </td>
 
                     <td className=" py-4 px-2 text-center text-tableGray border-b border-lightGray">
-                      <div className="flex justify-center items-center space-x-1 md:space-x-5">
+                      <div className="flex justify-center items-center space-x-2 md:space-x-5">
                         <div>
                           <Link
                             to="/user-details"

@@ -26,8 +26,8 @@ const Dashboard = () => {
 
   return (
     <Layout pageTitle="Dashboard">
-      <div className="px-4 md:px-4">
-        <div className="p-4 flex space-x-2 justify-end">
+      <div className="p-4 md:px-4">
+        <div className="px-4 pb-4 flex space-x-2 justify-end">
           {["Days", "Weeks", "Months"].map((period, index) => (
             <div
               key={index}
@@ -64,20 +64,20 @@ const Dashboard = () => {
                     <td colSpan="5" className="h-4"></td>
                   </tr>
                   <tr className="border-1 py-2 rounded bg-offWhite shadow-md">
-                    <td className="px-4 py-3">
+                    <td className="px-1 md:px-4 md:py-3">
                       <img src={item.image} alt={`${item.name} Image`} />
                     </td>
-                    <td className="md:px-4 md:py-3 font-semibold">
+                    <td className="px-1 md:px-4 md:py-3 w-60 md:w-auto font-semibold">
                       {item.name}
                     </td>
-                    <td className="md:px-4 md:py-3 font-semibold">
+                    <td className="px-1 md:px-4 md:py-3 font-semibold text-center">
                       {item.category}
                     </td>
-                    <td className="md:px-4 md:py-3 font-semibold">
+                    <td className="px-1 md:px-4 md:py-3 font-semibold text-center">
                       {item.location}
                     </td>
-                    <td className="md:px-4 md:py-3">
-                      <div className="md:flex items-center justify-center space-y-1 py-2 md:space-x-10 text-[8px] md:text-[16px]">
+                    <td className="px-1 md:px-4 md:py-3">
+                      <div className="md:flex items-center justify-center space-y-1 md:space-y-0 py-2 md:space-x-10 text-[8px] md:text-[16px]">
                         <CustomButton
                           bgColor="primaryYellow"
                           textColor="black"
@@ -85,6 +85,7 @@ const Dashboard = () => {
                           onClick={() => {
                             // Handle Approve button click
                           }}
+                          smallDeviceWidth="16"
                           width="auto"
                         />
                         <CustomButton
@@ -94,6 +95,7 @@ const Dashboard = () => {
                           onClick={() => {
                             // Handle Reject button click
                           }}
+                          smallDeviceWidth="16"
                           width="auto"
                         />
                       </div>
