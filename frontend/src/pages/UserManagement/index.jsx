@@ -53,7 +53,7 @@ const UserManagement = () => {
           <div className="md:px-4">
             <p className="text-sm md:text-xl font-normal">List of Users</p>
           </div>
-          <div className="md:p-4 w-screen md:w-auto">
+          <div className="md:p-4 md:w-auto">
             <table className="w-full border-collapse p-2">
               <thead className="bg-white text-darkBlue text-[8px] md:text-[13px]">
                 <tr>
@@ -76,7 +76,7 @@ const UserManagement = () => {
                 {userTableRowData.map((item, index) => (
                   <tr
                     key={index}
-                    className="bg-white text-[8px] md:text-[13px]"
+                    className="bg-white text-[8px] md:text-[13px] "
                   >
                     <td className="px-2 py-4 text-center border-b border-lightGray">
                       <div>
@@ -95,10 +95,12 @@ const UserManagement = () => {
                           src={item.image}
                           alt="User Profile thumbnail"
                         />
-                        <div className="whitespace-pre">{item.name}</div>
+                        <div className="whitespace-pre pl-2 pr-4">
+                          {item.name}
+                        </div>
                       </div>
                     </td>
-                    <td className=" py-4 text-center text-tableGray border-b border-lightGray">
+                    <td className=" py-4 mr-2 text-center text-tableGray border-b border-lightGray">
                       {item.email}
                     </td>
                     <td className=" py-4 text-center text-tableGray border-b border-lightGray">
@@ -106,7 +108,7 @@ const UserManagement = () => {
                     </td>
 
                     <td className=" py-4 px-2 text-center text-tableGray border-b border-lightGray">
-                      <div className="flex justify-center items-center space-x-2 md:space-x-5">
+                      <div className="flex justify-center items-center space-x-1 md:space-x-5">
                         <div>
                           <Link
                             to={`/user-management/${item.id}`}
@@ -116,7 +118,7 @@ const UserManagement = () => {
                           </Link>
                         </div>
                         <div>Disable /Enable</div>
-                        <div>
+                        <div className="w-4 md:auto">
                           <button>
                             <img
                               src={deleteIcon}

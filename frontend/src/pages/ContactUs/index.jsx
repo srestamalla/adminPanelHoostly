@@ -13,7 +13,7 @@ const ContactUs = () => {
               Data from Contact Form
             </p>
           </div>
-          <div className="p-4 w-screen md:w-auto">
+          <div className="p-4 md:w-auto">
             <table className="w-full border-collapse p-2">
               <thead className="bg-white text-darkBlue text-[8px] md:text-[13px]">
                 <tr>
@@ -64,7 +64,7 @@ const ContactUs = () => {
                         <div className="whitespace-pre">{item.name}</div>
                       </div>
                     </td>
-                    <td className=" py-4 text-center text-tableGray border-b border-lightGray">
+                    <td className=" py-4 pl-4 text-center text-tableGray border-b border-lightGray">
                       {item.email}
                     </td>
                     <td className=" py-4 text-center  text-tableGray border-b border-lightGray">
@@ -80,7 +80,7 @@ const ContactUs = () => {
                         className="w-3 h-3 md:w-auto md:h-auto"
                       />
                     </td>
-                    <td className=" py-4 text-center border-b border-lightGray">
+                    <td className=" py-4 pr-2 text-center border-b border-lightGray">
                       {item.date}
                     </td>
                   </tr>
