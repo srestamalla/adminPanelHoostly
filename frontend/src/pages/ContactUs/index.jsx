@@ -13,7 +13,7 @@ const ContactUs = () => {
               Data from Contact Form
             </p>
           </div>
-          <div className="p-4">
+          <div className="p-4 w-screen md:w-auto">
             <table className="w-full border-collapse p-2">
               <thead className="bg-white text-darkBlue text-[8px] md:text-[13px]">
                 <tr>
@@ -44,7 +44,7 @@ const ContactUs = () => {
                     key={index}
                     className="bg-white text-[8px] md:text-[13px]"
                   >
-                    <td className="px-2 py-4  text-center border-b border-lightGray">
+                    <td className="pl-2 py-4  text-center border-b border-lightGray">
                       <div>
                         <input
                           id={`checkbox${item.id}`}
@@ -54,14 +54,14 @@ const ContactUs = () => {
                         />
                       </div>
                     </td>
-                    <td className=" py-4 font-medium border-b border-lightGray">
+                    <td className="pl-2 py-4 font-medium border-b border-lightGray">
                       <div className="flex justify-left items-center gap-1 md:gap-3 md:space-x-3">
                         <img
                           className="inline-block h-3 w-3 md:h-6 md:w-6 rounded-full ring-white"
                           src={item.image}
                           alt="User Profile thumbnail"
                         ></img>
-                        {item.name}
+                        <div className="whitespace-pre">{item.name}</div>
                       </div>
                     </td>
                     <td className=" py-4 text-center text-tableGray border-b border-lightGray">
@@ -74,7 +74,11 @@ const ContactUs = () => {
                       {item.message}
                     </td>
                     <td className=" py-4 text-center text-tableGray border-b border-lightGray">
-                      <img src={fileIcon} alt="File icon" />
+                      <img
+                        src={fileIcon}
+                        alt="File icon"
+                        className="w-3 h-3 md:w-auto md:h-auto"
+                      />
                     </td>
                     <td className=" py-4 text-center border-b border-lightGray">
                       {item.date}

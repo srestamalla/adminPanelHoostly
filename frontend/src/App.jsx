@@ -23,7 +23,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/user-management" element={<UserManagement />} />
-          <Route path="/user-details" element={<UserDetails />} />
+          <Route path="/user-management/:userId" element={<UserDetails />} />
           <Route path="/category-management" element={<CategoryManagement />} />
           <Route path="/add-category" element={<AddCategory />} />
           <Route path="/ads-management" element={<AdsManagement />} />

@@ -86,7 +86,7 @@ const Dashboard = () => {
                             // Handle Approve button click
                           }}
                           smallDeviceWidth="16"
-                          width="auto"
+                          // width="50"
                         />
                         <CustomButton
                           bgColor="black"
@@ -96,7 +96,7 @@ const Dashboard = () => {
                             // Handle Reject button click
                           }}
                           smallDeviceWidth="16"
-                          width="auto"
+                          // width="50"
                         />
                       </div>
                     </td>

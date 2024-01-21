@@ -109,7 +109,7 @@ const UserManagement = () => {
                       <div className="flex justify-center items-center space-x-2 md:space-x-5">
                         <div>
                           <Link
-                            to="/user-details"
+                            to={`/user-management/${item.id}`}
                             className="py-2 flex items-center hover:text-primaryYellow"
                           >
                             View
