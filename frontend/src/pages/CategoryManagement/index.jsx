@@ -49,20 +49,20 @@ const CategoryManagement = () => {
               <tbody className="text-[9px] md:text-[15px]">
                 {categoryTableRowData.map((item, index) => (
                   <tr key={index} className="bg-white">
-                    <td className=" py-4 text-center font-normal  text-tableGray border-b border-lightGray">
-                      <p>{item.categoryName}</p>
+                    <td className="px-3 py-4 w-40 md:w-auto font-normal  text-tableGray border-b border-lightGray">
+                      {item.categoryName}
                     </td>
-                    <td className=" py-4 text-center font-normal   text-tableGray border-b border-lightGray">
+                    <td className=" px-2 py-4 w-40 md:auto font-normal   text-tableGray border-b border-lightGray">
                       {item.subCategory}
                     </td>
-                    <td className=" py-4 text-center border-b border-lightGray">
+                    <td className=" py-4 border-b border-lightGray">
                       <img
                         className="inline-block h-4 w-4 md:h-6 md:w-6 rounded-full ring-white"
                         src={item.image}
                         alt="User Profile thumbnail"
                       ></img>
                     </td>
-                    <td className=" py-4 px-1 text-center font-normal text-tableGray border-b border-lightGray ">
+                    <td className=" pr-2 py-4 font-normal text-tableGray border-b border-lightGray ">
                       <div className=" md:flex md:space-x-2 md:justify-center md:items-center space-y-1 md:space-y-0">
                         <button className="bg-primaryYellow text-white w-14 rounded-[3px] py-1 px-1 flex items-center gap-1 md:justify-center md:w-20">
                           <img

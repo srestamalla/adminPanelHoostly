@@ -46,7 +46,7 @@ const AdsManagement = () => {
                       <td className="px-1 md:px-4 py-3">
                         <img src={item.image} alt={`${item.name} Image`} />
                       </td>
-                      <td className="px-1 md:px-4 py-3 font-semibold">
+                      <td className="px-1 md:px-4 py-3 w-36 md:w-auto font-semibold">
                         {item.adsName}
                       </td>
                       <td className="px-1 md:px-4 py-3 font-normal">
@@ -56,7 +56,7 @@ const AdsManagement = () => {
                         <button
                           className={`${
                             item.status === "Active" ? "bg-green" : "bg-red"
-                          } text-white px-1 md:px-4 py-2 rounded-md`}
+                          } text-white px-1 md:px-4 py-1 md:py-2 rounded-sm md:rounded-md`}
                         >
                           {item.status}
                         </button>

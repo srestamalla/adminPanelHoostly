@@ -85,10 +85,10 @@ const UserDetails = () => {
                           className="w-14 md:w-auto"
                         />
                       </div>
-                      <div className="px-1 md:px-4 py-3 font-semibold">
+                      <div className="px-1 md:px-4 py-3 w-36 md:w-auto font-semibold">
                         {item.featuredAdsName}
                       </div>
-                      <div className="pl-1 md:px-4 py-3 font-semibold">
+                      <div className="pl-2 md:px-4 py-3 font-semibold">
                         <button
                           className={`${
                             item.status === "Active"
@@ -96,20 +96,20 @@ const UserDetails = () => {
                               : item.status === "Expired"
                               ? "bg-primaryYellow"
                               : "bg-red"
-                          } text-white px-1 md:px-4 py-2 rounded-md`}
+                          } text-white px-1 md:px-4 py-1 md:py-2 rounded-sm md:rounded-md`}
                         >
                           {item.status}
                         </button>
                       </div>
-                      <div className="px-1 md:px-4 py-3 font-normal text-center ">
+                      <div className="px-2 md:px-4 py-3 font-normal text-center ">
                         Category/Sub category
                       </div>
-                      <div className="px-1 md:px-4 py-3 font-semibold">
-                        <button className="bg-primaryYellow text-white px-1 md:px-4 py-2 rounded-md">
+                      <div className="px-2 md:px-4 py-3 font-semibold">
+                        <button className="bg-primaryYellow text-white px-1 md:px-4 py-1 md:py-2 rounded-sm md:rounded-md">
                           Promote
                         </button>
                       </div>
-                      <div className="px-1 space-x-1 md:px-4 py-3 md:w-auto">
+                      <div className="px-1 md:space-x-1 space-y-1 md:space-y-0 md:px-4 py-3 md:w-auto">
                         <button>
                           <img src={editIcon} alt="edit icon" />
                         </button>

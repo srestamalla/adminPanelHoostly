@@ -7,8 +7,8 @@ export const categoryTableRowData = [
   {
     id: 1,
     image: lindseyStroud,
-    categoryName: "Etiam purus in",
-    subCategory: "Curabitur donec duis",
+    categoryName: "Etiam purus in Etiam purus in",
+    subCategory: " Curabitur donec duis Curabitur donec duis",
   },
   {
     id: 2,

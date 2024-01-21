@@ -14,26 +14,26 @@ const ContactUs = () => {
             </p>
           </div>
           <div className="p-4 md:w-auto">
-            <table className="w-full border-collapse p-2">
+            <table className="w-full border-collapse">
               <thead className="bg-white text-darkBlue text-[8px] md:text-[13px]">
                 <tr>
                   <th className="px-2 py-2 border-b border-lightGray"></th>
-                  <th className="font-medium py-2 border-b border-lightGray">
+                  <th className="font-medium w-20 py-2 px-1 border-b border-lightGray">
                     Name
                   </th>
-                  <th className="font-medium py-2 border-b border-lightGray">
+                  <th className="font-medium py-2 px-1 border-b border-lightGray">
                     Email
                   </th>
-                  <th className="font-medium py-2 border-b border-lightGray">
+                  <th className="font-medium py-2 px-1 border-b border-lightGray">
                     Phone No
                   </th>
-                  <th className="font-medium py-2 border-b border-lightGray">
+                  <th className="font-medium py-2 px-1 border-b border-lightGray">
                     Message
                   </th>
-                  <th className="font-medium py-2 border-b border-lightGray">
+                  <th className="font-medium py-2 px-1 border-b border-lightGray">
                     File
                   </th>
-                  <th className="font-medium py-2 border-b border-lightGray">
+                  <th className="font-medium py-2 px-1 border-b border-lightGray">
                     Date
                   </th>
                 </tr>
@@ -44,7 +44,7 @@ const ContactUs = () => {
                     key={index}
                     className="bg-white text-[8px] md:text-[13px]"
                   >
-                    <td className="pl-2 py-4  text-center border-b border-lightGray">
+                    <td className="pl-2 py-4 px-2  text-center border-b border-lightGray">
                       <div>
                         <input
                           id={`checkbox${item.id}`}
@@ -54,8 +54,8 @@ const ContactUs = () => {
                         />
                       </div>
                     </td>
-                    <td className="pl-2 py-4 font-medium border-b border-lightGray">
-                      <div className="flex justify-left items-center gap-1 md:gap-3 md:space-x-3">
+                    <td className="pl-2 py-4 px-2 font-medium border-b border-lightGray">
+                      <div className="flex justify-left items-center w-24 md:w-auto gap-1 md:gap-3 md:space-x-3">
                         <img
                           className="inline-block h-3 w-3 md:h-6 md:w-6 rounded-full ring-white"
                           src={item.image}
@@ -64,13 +64,13 @@ const ContactUs = () => {
                         <div className="whitespace-pre">{item.name}</div>
                       </div>
                     </td>
-                    <td className=" py-4 pl-4 text-center text-tableGray border-b border-lightGray">
+                    <td className=" py-4 px-2 pl-2 text-center text-tableGray border-b border-lightGray">
                       {item.email}
                     </td>
-                    <td className=" py-4 text-center  text-tableGray border-b border-lightGray">
+                    <td className=" py-4 px-2 text-center  text-tableGray border-b border-lightGray">
                       {item.phoneNo}
                     </td>
-                    <td className=" py-4 text-center text-tableGray border-b border-lightGray">
+                    <td className=" py-4 px-2 text-center text-tableGray border-b border-lightGray">
                       {item.message}
                     </td>
                     <td className=" py-4 text-center text-tableGray border-b border-lightGray">
@@ -80,7 +80,7 @@ const ContactUs = () => {
                         className="w-3 h-3 md:w-auto md:h-auto"
                       />
                     </td>
-                    <td className=" py-4 pr-2 text-center border-b border-lightGray">
+                    <td className="py-4 px-2 text-center border-b border-lightGray">
                       {item.date}
                     </td>
                   </tr>
