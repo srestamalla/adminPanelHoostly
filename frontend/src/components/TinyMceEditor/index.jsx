@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import { Editor } from "@tinymce/tinymce-react";
-import CustomButton from "../../shared/CustomButton";
 
 const TinyMceEditor = () => {
   const editorRef = useRef(null);
@@ -51,11 +50,13 @@ const TinyMceEditor = () => {
         <button className="bg-black text-white text-[9px] w-16 px-2 py-1 md:text-sm md:w-28 md:px-4 md:py-2 rounded-sm">
           Cancel
         </button>
-        <button className="bg-primaryYellow text-black text-[9px] md:text-sm w-16 px-2 py-1 md:w-28 md:px-4 md:py-2 rounded-sm">
+        <button
+          onClick={log}
+          className="bg-primaryYellow text-black text-[9px] md:text-sm w-16 px-2 py-1 md:w-28 md:px-4 md:py-2 rounded-sm"
+        >
           Update
         </button>
       </div>
-      <button onClick={log}>Log editor content</button>
     </>
   );
 };

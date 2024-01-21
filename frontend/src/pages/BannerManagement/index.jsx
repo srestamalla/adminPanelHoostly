@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useState } from "react";
 import Layout from "../../containers/layouts";
 import CustomButton from "../../shared/CustomButton";
 import { Formik, Form, Field } from "formik";
@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 
 const BannerManagement = () => {
   const navigate = useNavigate();
+  const [isActive, setIsActive] = useState(null);
 
   const handleBackToListClick = () => {
     navigate("/banner-lists");
@@ -44,88 +45,101 @@ const BannerManagement = () => {
               }}
               validationSchema={Yup.object({
                 bannerName: Yup.string()
-                  .max(15, "Must be 15 characters or less")
+                  .max(20, "Must be 20 characters or less")
+                  .min(3, "Must be 3 characters or more")
                   .required("Required"),
-                bannerFile: Yup.string().required("Required"),
+                bannerType: Yup.string().required("Required"),
               })}
               onSubmit={(values, { setSubmitting }) => {
                 setTimeout(() => {
-                  alert(JSON.stringify(values, null, 2));
+                  console.log(values, "values");
                   setSubmitting(false);
                 }, 400);
               }}
             >
-              {({ values }) => (
-                <Form>
-                  <div className="pt-4">
-                    <CustomTextInputField
-                      label="Banner Name"
-                      name="bannerName"
-                      type="text"
-                    />
-                  </div>
+              <Form>
+                <div className="pt-4">
+                  <CustomTextInputField
+                    id="bannerName"
+                    label="Banner Name"
+                    name="bannerName"
+                    type="text"
+                  />
+                </div>
 
-                  <div id="my-radio-group" className="pt-4">
-                    Banner Type
-                    <div
-                      role="group"
-                      aria-labelledby="my-radio-group"
-                      className="flex justify-between pt-4"
-                    >
-                      <div>
-                        <label className="cursor-pointer bg-white text-black py-2 px-4 w-30">
-                          <Field
-                            type="radio"
-                            name="bannerType"
-                            value="Header"
-                            className="hidden"
-                          />
-                          Header Banner
-                        </label>
-                      </div>
-                      <div>
-                        <label className="cursor-pointer bg-white text-black py-2 px-4">
-                          <Field
-                            type="radio"
-                            name="bannerType"
-                            value="Footer"
-                            className="hidden"
-                          />
-                          Footer Banner
-                        </label>
-                      </div>
+                <div id="my-radio-group" className="pt-4">
+                  Banner Type
+                  <div
+                    role="group"
+                    aria-labelledby="my-radio-group"
+                    className="flex justify-between pt-4"
+                  >
+                    <div>
+                      <label
+                        className={`cursor-pointer text-black py-2 px-4 w-30 ${
+                          isActive === 1 ? "bg-primaryYellow" : "bg-white"
+                        }`}
+                        onClick={() => {
+                          setIsActive(1);
+                        }}
+                      >
+                        <Field
+                          type="radio"
+                          name="bannerType"
+                          value="Header"
+                          className="hidden"
+                        />
+                        Header Banner
+                      </label>
+                    </div>
+                    <div>
+                      <label
+                        className={`cursor-pointer  text-black py-2 px-4 ${
+                          isActive === 2 ? "bg-primaryYellow" : "bg-white"
+                        }`}
+                        onClick={() => {
+                          setIsActive(2);
+                        }}
+                      >
+                        <Field
+                          type="radio"
+                          name="bannerType"
+                          value="Footer"
+                          className="hidden"
+                        />
+                        Footer Banner
+                      </label>
                     </div>
                   </div>
-                  <div className="pt-4">
-                    <CustomFileUploadField
-                      label="Banner File"
-                      name="bannerFile"
-                    />
-                  </div>
-                </Form>
-              )}
-            </Formik>
-          </div>
+                </div>
+                <div className="pt-4">
+                  <CustomFileUploadField
+                    id="bannerFile"
+                    label="Banner File"
+                    name="bannerFile"
+                  />
+                </div>
 
-          <div className="md:px-4 space-x-4 pt-8 pb-4 flex items-center text-[13px] justify-end ">
-            <CustomButton
-              bgColor="primaryYellow"
-              textColor="black"
-              label="Cancel"
-              onClick={() => {
-                // Handle Approve button click
-              }}
-              smallDeviceWidth="32"
-            />
-            <CustomButton
-              bgColor="black"
-              textColor="white"
-              label="Upload Banner"
-              onClick={() => {
-                // Handle Approve button click
-              }}
-              smallDeviceWidth="32"
-            />
+                <div className="md:px-4 space-x-4 pt-8 pb-4 flex items-center text-[13px] justify-end ">
+                  <CustomButton
+                    bgColor="primaryYellow"
+                    textColor="black"
+                    label="Cancel"
+                    onClick={() => {
+                      // Handle Approve button click
+                    }}
+                    smallDeviceWidth="32"
+                  />
+                  <button
+                    className={`bg-black text-white p-1 md:py-2 px-3 rounded-full font-normal w-32 md:w-44
+                whitespace-pre`}
+                    type="submit"
+                  >
+                    Upload Banner
+                  </button>
+                </div>
+              </Form>
+            </Formik>
           </div>
         </div>
       </Layout>

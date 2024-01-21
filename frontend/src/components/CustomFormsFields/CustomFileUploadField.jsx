@@ -3,7 +3,7 @@ import { useField } from "formik";
 import { useDropzone } from "react-dropzone";
 
 const CustomFileUploadField = ({ label, ...props }) => {
-  const [field, meta, helpers] = useField(props);
+  const [meta, helpers] = useField(props);
 
   const onDrop = useCallback(
     (acceptedFiles) => {
@@ -16,18 +16,16 @@ const CustomFileUploadField = ({ label, ...props }) => {
 
   return (
     <div>
-      <div>
-        <label htmlFor={props.id || props.name} className="">
-          {label}
-        </label>
+      <div className="mt-2">
+        <label htmlFor={props.id || props.name}>{label}</label>
       </div>
       <div
         {...getRootProps()}
-        className={`pt-4 text-input text-center w-full h-20 bg-white ${
+        className={`mt-4 p-2 text-input text-center w-full h-32 bg-white ${
           isDragActive ? "border-dashed border-blue-500" : "border-gray-300"
         } flex items-center justify-center`}
       >
-        <input {...getInputProps()} />
+        <input {...getInputProps()} id={props.id} />
         <p>
           {isDragActive
             ? "Drop the file here ..."

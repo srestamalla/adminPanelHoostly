@@ -10,7 +10,7 @@ const CustomButton = ({
 }) => {
   return (
     <button
-      className={`bg-${bgColor} text-${textColor} p-1 px-3 rounded-full font-normal w-${smallDeviceWidth} ${
+      className={`bg-${bgColor} text-${textColor} p-1 md:py-2 px-3 rounded-full font-normal w-${smallDeviceWidth} ${
         width ? `md:w-${width}` : `md:w-44`
       } whitespace-pre`}
       onClick={onClick}

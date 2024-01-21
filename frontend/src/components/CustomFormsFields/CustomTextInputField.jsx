@@ -13,7 +13,11 @@ const CustomTextInputField = ({ label, ...props }) => {
           </label>
         </div>
         <div className="pt-2">
-          <input className="text-input w-full h-10" {...field} {...props} />
+          <input
+            className="text-input pl-2 w-full h-10"
+            {...field}
+            {...props}
+          />
         </div>
       </div>
       <div>
