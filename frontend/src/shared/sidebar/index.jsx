@@ -20,7 +20,7 @@ const Sidebar = () => {
     return () => {
       window.removeEventListener("resize", handleWindowSizeChange);
     };
-  }, [window.innerWidth]);
+  }, [width, isMobile]);
 
   return (
     <>

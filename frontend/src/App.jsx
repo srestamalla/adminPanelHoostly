@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import UserManagement from "./pages/UserManagement";
 import AdsManagement from "./pages/adsmanagement";
@@ -19,7 +19,7 @@ import UserDetails from "./pages/UserDetails";
 const App = () => {
   return (
     <div className="app">
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/user-management" element={<UserManagement />} />
@@ -40,7 +40,7 @@ const App = () => {
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/contact-us" element={<ContactUs />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 };
